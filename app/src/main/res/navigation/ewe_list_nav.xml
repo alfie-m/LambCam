@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ewe_list_nav"
+    app:startDestination="@id/eweListFragment2">
+    <fragment
+        android:id="@+id/eweListFragment2"
+        android:name="com.example.lambcamv1.fragments.eweListFragments.EweListFragment"
+        android:label="fragment_ewe_list"
+        tools:layout="@layout/fragment_ewe_list" >
+        <action
+            android:id="@+id/action_eweListFragment2_to_addEweFragment"
+            app:destination="@id/addEweFragment" />
+        <action
+            android:id="@+id/action_eweListFragment2_to_updateEweFragment"
+            app:destination="@id/updateEweFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEweFragment"
+        android:name="com.example.lambcamv1.fragments.eweListFragments.AddEweFragment"
+        android:label="fragment_add_ewe"
+        tools:layout="@layout/fragment_add_ewe" >
+        <action
+            android:id="@+id/action_addEweFragment_to_eweListFragment2"
+            app:destination="@id/eweListFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateEweFragment"
+        android:name="com.example.lambcamv1.fragments.eweListFragments.UpdateEweFragment"
+        android:label="UpdateEweFragment" >
+        <action
+            android:id="@+id/action_updateEweFragment_to_eweListFragment2"
+            app:destination="@id/eweListFragment2" />
+        <argument
+            android:name="currentEwe"
+            app:argType="com.example.lambcamv1.models.Ewe" />
+    </fragment>
+</navigation>

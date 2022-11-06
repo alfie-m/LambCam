@@ -1,0 +1,12 @@
+<resources>
+    <!-- Notification Preference -->
+    <string-array name="notification_entries">
+        <item>Every half an hour</item>
+        <item>Every hour</item>
+    </string-array>
+
+    <string-array name="notification_values">
+        <item>half_an_hour</item>
+        <item>hour</item>
+    </string-array>
+</resources>

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.userPageFragments.UserPageFragment"
+    android:background="@color/white">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/backFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_back_arrow"
+        android:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:padding="20dp"
+        android:text="User Page"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:background="@color/yellow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBar" />
+
+    <TextView
+        android:id="@+id/addressTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:drawableLeft="@drawable/ic_address"
+        android:drawablePadding="12dp"
+        android:text="Address"
+        android:textSize="24dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/titleBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginVertical="6dp"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressTitleTextView" />
+
+    <TextView
+        android:id="@+id/farmNameTextView"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:text="Farm name:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/addressTitleTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/farmNameBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/addressTitleTextView"
+        app:layout_constraintStart_toEndOf="@id/farmNameTextView" />
+
+    <TextView
+        android:id="@+id/townTextView"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="Town/village:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/farmNameTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/townBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/farmNameBox"
+        app:layout_constraintStart_toEndOf="@id/townTextView" />
+
+    <TextView
+        android:id="@+id/countyTextView"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="County:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/townTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/countyBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/townBox"
+        app:layout_constraintStart_toEndOf="@id/countyTextView" />
+
+    <TextView
+        android:id="@+id/postcodeTextView"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="Postcode:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/countyTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/postcodeBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/countyBox"
+        app:layout_constraintStart_toEndOf="@id/postcodeTextView" />
+
+    <TextView
+        android:id="@+id/statsTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginBottom="12dp"
+        android:text="Statistics"
+        android:textSize="24dp"
+        android:drawableLeft="@drawable/ic_chart"
+        android:drawablePadding="12dp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/postcodeTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginVertical="6dp"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statsTitleTextView" />
+
+    <TextView
+        android:id="@+id/eweNumberTextView"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:text="Number of registered ewes:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/statsTitleTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/eweNumberBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/statsTitleTextView"
+        app:layout_constraintStart_toEndOf="@id/eweNumberTextView" />
+
+    <TextView
+        android:id="@+id/tupNumberTextView"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="Number of registered tups:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/eweNumberTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tupNumberBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/eweNumberBox"
+        app:layout_constraintStart_toEndOf="@id/tupNumberTextView" />
+
+    <TextView
+        android:id="@+id/lambNumberTextView"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="12dp"
+        android:text="Number of recorded lambs:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tupNumberTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lambNumberBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/tupNumberBox"
+        app:layout_constraintStart_toEndOf="@id/lambNumberTextView" />
+
+    <TextView
+        android:id="@+id/singlesTextView"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="12dp"
+        android:text="Singles:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/lambNumberTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/singlesBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/lambNumberBox"
+        app:layout_constraintStart_toEndOf="@id/singlesTextView" />
+
+    <TextView
+        android:id="@+id/eweLambsTextView"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="12dp"
+        android:text="Ewes:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/lambNumberBox"
+        app:layout_constraintStart_toEndOf="@id/singlesBox" />
+
+    <TextView
+        android:id="@+id/eweLambsBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/lambNumberBox"
+        app:layout_constraintStart_toEndOf="@id/eweLambsTextView" />
+
+    <TextView
+        android:id="@+id/tupLambsTextView"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginVertical="12dp"
+        android:text="Tups:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/eweLambsBox"
+        app:layout_constraintStart_toEndOf="@id/twinsBox" />
+
+    <TextView
+        android:id="@+id/tupLambsBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/eweLambsBox"
+        app:layout_constraintStart_toEndOf="@id/tupLambsTextView" />
+
+    <TextView
+        android:id="@+id/twinsTextView"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginVertical="12dp"
+        android:text="Twins:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/singlesTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/twinsBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/singlesBox"
+        app:layout_constraintStart_toEndOf="@id/twinsTextView" />
+
+    <TextView
+        android:id="@+id/tripletsTextView"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginVertical="12dp"
+        android:text="Triplets:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/twinsTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tripletsBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/twinsBox"
+        app:layout_constraintStart_toEndOf="@id/tripletsTextView" />
+
+    <TextView
+        android:id="@+id/quadrupletsTextView"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginVertical="12dp"
+        android:text="Quadruplets:"
+        android:textSize="18dp"
+        android:gravity="end"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tripletsTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/quadrupletsBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="12dp"
+        android:text="..."
+        android:textSize="18dp"
+        app:layout_constraintTop_toBottomOf="@id/tripletsBox"
+        app:layout_constraintStart_toEndOf="@id/quadrupletsTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lamb_list_nav"
+    app:startDestination="@id/lambListFragment">
+
+    <fragment
+        android:id="@+id/lambListFragment"
+        android:name="com.example.lambcamv1.fragments.lambListFragments.LambListFragment"
+        android:label="LambListFragment"
+        tools:layout="@layout/fragment_lamb_list">
+        <action
+            android:id="@+id/action_lambListFragment_to_updateLambFragment"
+            app:destination="@id/updateLambFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateLambFragment"
+        android:name="com.example.lambcamv1.fragments.lambListFragments.UpdateLambFragment"
+        android:label="UpdateLambFragment" >
+        <action
+            android:id="@+id/action_updateLambFragment_to_lambListFragment"
+            app:destination="@id/lambListFragment" />
+        <argument
+            android:name="currentLamb"
+            app:argType="com.example.lambcamv1.models.Lamb" />
+    </fragment>
+</navigation>

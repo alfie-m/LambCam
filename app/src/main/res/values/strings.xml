@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">LambCam</string>
+
+    <string-array name="lambSex">
+        <item>Ewe</item>
+        <item>Tup</item>
+    </string-array>
+
+    <string-array name="lambSiblings">
+        <item>Single</item>
+        <item>Twin</item>
+        <item>Triplet</item>
+        <item>Quadruplet</item>
+    </string-array>
+
+    <!-- Preference Titles -->
+    <string name="address_header">Address</string>
+    <string name="notifications_header">Notifications</string>
+    <string name="stats_header">Statistics</string>
+
+    <!-- Address Preferences -->
+    <string name="farm_name_title">Farm name</string>
+    <string name="town_title">Town/Village</string>
+    <string name="county_title">County</string>
+    <string name="postcode_title">Postcode</string>
+
+    <!-- Notification Preferences -->
+    <string name="notifications_title">Enable notifications</string>
+    <string name="frequency_title">Notification frequency</string>
+    <string name="notifications_summary_on">Allow notification reminders at set interval</string>
+    <string name="notifications_summary_off">Notification reminders blocked</string>
+
+    <!-- Statistics Preferences -->
+    <string name="stats_title">Enable statistics</string>
+    <string name="stats_summary_on">Allow statistics to be recorded</string>
+    <string name="stats_summary_off">Stop recording of statistics</string>
+
+</resources>

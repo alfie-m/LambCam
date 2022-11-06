@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.LambCamV1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/appName"
+        android:layout_width="match_parent"
+        android:layout_height="118dp"
+        android:paddingStart="10dp"
+        android:background="@drawable/logo"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressBox"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/addressBox"/>
+
+
+    <TextView
+        android:id="@+id/addressBox"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:drawableRight="@drawable/ic_tractor"
+        android:layout_marginHorizontal="12dp"
+        android:drawablePadding="16dp"
+        android:padding="12dp"
+        android:text="....address box"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName" />
+
+    <Button
+        android:id="@+id/userPageButton"
+        android:layout_width="285dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="12dp"
+        android:drawableLeft="@drawable/ic_account"
+        android:text="Account and stats"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/herdBookButton"
+        app:layout_constraintTop_toBottomOf="@id/addressBox" />
+
+    <Button
+        android:id="@+id/herdBookButton"
+        android:layout_width="285dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="12dp"
+        android:drawableLeft="@drawable/ic_herdbook"
+        android:text="Full herd book"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/userPageButton"
+        app:layout_constraintTop_toBottomOf="@id/addressBox" />
+
+
+    <Button
+        android:id="@+id/lambListButton"
+        android:layout_width="285dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:drawableLeft="@drawable/ic_lamb_list"
+        android:text="Full lamb list"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/addButton"
+        app:layout_constraintTop_toBottomOf="@id/herdBookButton" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="285dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="12dp"
+        android:drawableLeft="@drawable/ic_add"
+        android:text="quick add new lamb"
+        app:cornerRadius="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/lambListButton"
+        app:layout_constraintTop_toBottomOf="@id/userPageButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recently added lambs"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="12dp"
+        android:background="@color/yellow"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@id/lambFragmentContainer"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="12dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/lambFragmentContainer"/>
+
+    <FrameLayout
+        android:id="@+id/lambFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,63 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/address_header"
+        app:iconSpaceReserved="true"
+        app:icon="@drawable/ic_address">
+
+        <EditTextPreference
+            app:key="farm_name"
+            app:title="@string/farm_name_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="farm_town"
+            app:title="@string/town_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="farm_county"
+            app:title="@string/county_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="farm_postcode"
+            app:title="@string/postcode_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/notifications_header"
+        app:iconSpaceReserved="true"
+        android:icon="@drawable/ic_notifications">
+
+        <SwitchPreferenceCompat
+            app:key="notifications"
+            app:title="@string/notifications_title"
+            app:summaryOff="@string/notifications_summary_off"
+            app:summaryOn="@string/notifications_summary_on"/>
+
+        <ListPreference
+            app:key="notification_frequency"
+            app:dependency="notifications"
+            app:defaultValue="Every hour"
+            app:entries="@array/notification_entries"
+            app:entryValues="@array/notification_values"
+            app:title="@string/frequency_title"
+            app:useSimpleSummaryProvider="true"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/stats_header"
+        app:iconSpaceReserved="true"
+        android:icon="@drawable/ic_chart">
+
+        <SwitchPreferenceCompat
+            app:key="statistics"
+            app:title="@string/stats_title"
+            app:summaryOff="@string/stats_summary_off"
+            app:summaryOn="@string/stats_summary_on"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

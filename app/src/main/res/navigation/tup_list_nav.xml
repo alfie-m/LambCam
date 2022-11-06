@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tup_list_nav"
+    app:startDestination="@id/tupListFragment">
+
+    <fragment
+        android:id="@+id/tupListFragment"
+        android:name="com.example.lambcamv1.fragments.tupListFragments.TupListFragment"
+        android:label="fragment_tup_list"
+        tools:layout="@layout/fragment_tup_list" >
+        <action
+            android:id="@+id/action_tupListFragment_to_addTupFragment"
+            app:destination="@id/addTupFragment" />
+        <action
+            android:id="@+id/action_tupListFragment_to_updateTupFragment"
+            app:destination="@id/updateTupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTupFragment"
+        android:name="com.example.lambcamv1.fragments.tupListFragments.AddTupFragment"
+        android:label="fragment_add_tup"
+        tools:layout="@layout/fragment_add_tup" >
+        <action
+            android:id="@+id/action_addTupFragment_to_tupListFragment"
+            app:destination="@id/tupListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTupFragment"
+        android:name="com.example.lambcamv1.fragments.tupListFragments.UpdateTupFragment"
+        android:label="UpdateTupFragment" >
+        <action
+            android:id="@+id/action_updateTupFragment_to_tupListFragment"
+            app:destination="@id/tupListFragment" />
+        <argument
+            android:name="currentTup"
+            app:argType="com.example.lambcamv1.models.Tup" />
+    </fragment>
+</navigation>
